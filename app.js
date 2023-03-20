@@ -1,26 +1,19 @@
-// const http = require('http');
 const express = require("express");
-
+const bodyParser = require("body-parser");
+const adminRouter = require("./routes/admin");
+const productRouter = require("./routes/shop");
+const path = require("path")
 const app = express();
 
 const port = 3000;
-app.use("/", (req, res, next) => {
-    console.log("Always runs");
-    next()
-  }),
 
-app.use("/add-products", (req, res, next) => {
-  console.log("In Second Middleware");
-  res.send(`<h1>Add Your product</h1>`);
-});
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.static(path.join(__dirname, "public")))
 
-app.use("/", (req, res, next) => {
-  console.log("Hello from middleware");
-  res.send(`<h1>Hello from middleware</h1>`);
-  // next()
-}),
-  // const server= http.createServer(app);
+app.use("/admin",adminRouter);
+app.use(productRouter);
 
-  // server.listen(port);
-
-  app.listen(port);
+app.use((req,res,next)=>{
+    res.status(404).sendFile(path.join(__dirname,"views", "404.html"))
+})
+app.listen(port);
