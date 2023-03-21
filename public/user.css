@@ -1,0 +1,38 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.user-page{
+    width: 100%;
+    height: 100vh;
+    background-color: #b9b4b43b;
+    padding: 10px;
+    text-align: center;
+}
+.user-header{
+    color: rgb(225, 19, 122);
+    padding: 30px;
+}
+.table{
+    text-align: center;
+    margin: 0 auto;
+    border: 1px solid gray;
+}
+.tr-row{
+    border: 1px solid gray !important;
+    padding: 5px;
+    background-color: #b2ada7;
+}
+.tr-row th{
+    padding: 5px;
+    font-size: 20px;
+    border: 1px solid gray !important;
+}
+.tr-row-td{
+    border: 1px solid gray !important;
+    padding: 5px;
+}
+.tr-row-td td{
+    padding: 5px;
+    border: 1px solid gray !important;
+}

@@ -1,0 +1,22 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.home-page{
+    width: 100%;
+    background-color: #b9b4b43b;
+    padding: 10px 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.home-content{
+    color: #ab0e3e;
+    text-shadow: 2px 2px 2px salmon;
+    margin: 0 auto;
+    font-size: 60px;
+    cursor: pointer;
+}
+.home-content:hover{
+    color: rgb(190, 25, 113);
+}
