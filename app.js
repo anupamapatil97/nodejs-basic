@@ -16,15 +16,6 @@ app.use(express.static(path.join(__dirname, "public")))
 app.set("view engine","ejs")
 app.set('views',"views")
 
-//handlebars
-// app.engine('hbs', expressHbs({layoutsDir:'views/layouts', defaultLayout:'main-layout', extname:'hbs'}))
-// app.set('view engine', 'hbs')
-// app.set('views', 'views')
-
-//pug implementation
-// app.set("view engine","pug")
-// app.set('views',"views")
-
 app.use("/admin",adminData.router);
 app.use(productRouter);
 
