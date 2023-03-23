@@ -15,7 +15,7 @@ router.get("/add-products", (req, res, next) => {
   // res.sendFile(path.join(rootDir, "views", "add-product.html"))
 
   //pug file
-  res.render("add-product", {pageTitle:"Add Product", path:'/admin/add-products'})
+  res.render("add-product", {pageTitle:"Add Product", path:'/admin/add-products', productCss:true, formCss:true, activeAddProduct:true})
 
 });
 
