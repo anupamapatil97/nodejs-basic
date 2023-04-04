@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;  
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    padding: 10px;
+    color: red;
+}
+.user-wrapper{
+    width: 100%;
+    background-color: rgb(251 247 243 / 24%);
+
+    height: 100vh;
+}
+.card{
+    padding: 20px;
+
+}
+.card h2{
+    color: rgb(129, 227, 129);
+    text-decoration: underline;
+}
+.card ol{
+    margin: 20px;
+}

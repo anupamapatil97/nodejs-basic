@@ -1,0 +1,28 @@
+<%- include('includes/head.ejs') %>
+<link href="/css/users.css" rel="stylesheet"/>
+
+</head>
+
+<body>
+    <%- include('includes/navigate.ejs')%>
+    <div class="user-container">
+        <div class="user-wrapper">
+            <% if(userList.length) {%>
+                <div class="card">
+                    <h2>List of Users</h2>
+                    <ol>
+                        <% for(let data of userList) {%>
+
+                            <li>
+                                <%= data.username %>
+                            </li>
+                            <% } %>
+
+                    </ol>
+                </div>
+                <% } else { %>
+                    <h1>No Users Found!</h1>
+                    <% } %>
+        </div>
+    </div>
+    <%- include('includes/end.ejs')%>

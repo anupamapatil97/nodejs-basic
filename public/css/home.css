@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;  
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.home-page{
+    background-color: rgb(251 247 243 / 24%);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+.home-wrapper{
+    margin: 0 auto;
+    width: 40%;
+    box-shadow: 2px 3px 5px #b1acac;
+    background-color: #c9d0d06b;
+}
+.home-wrapper h1{
+    color: rebeccapurple;
+    font-size: 40px;
+     margin: 20px 0;
+     text-align: center;
+}
+.form{
+    margin: 0 auto;
+    width: 50%;
+    padding: 20px;
+}
+.form .form-control label{
+    font-size: 15px;
+    margin: 0 auto;
+    display: block;
+    padding: 10px;
+}
+.form .form-control input{
+    padding: 5px;
+    margin: 0 10px 10px 10px;
+}
+.add-user-btn{
+    padding: 5px;
+    margin-left: 10px;
+    /* margin: 0 auto; */
+    text-align: center;
+    border: 1px solid purple;
+    border-radius: 2px;
+}
