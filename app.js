@@ -1,8 +1,9 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const adminData = require("./routes/admin");
+const adminRoutes = require("./routes/admin");
 const productRouter = require("./routes/shop");
 const expressHbs= require('express-handlebars')
+const pageNotFoundController= require("./controller/404")
 
 const path = require("path")
 const app = express();
@@ -16,12 +17,8 @@ app.use(express.static(path.join(__dirname, "public")))
 app.set("view engine","ejs")
 app.set('views',"views")
 
-app.use("/admin",adminData.router);
+app.use("/admin",adminRoutes);
 app.use(productRouter);
 
-app.use((req,res,next)=>{
-    // res.status(404).sendFile(path.join(__dirname,"views", "404.html"))
-    res.status(404).render("404", {pageTitle:"Page Not Found"})
-
-})
+app.use(pageNotFoundController.pageNotFound)
 app.listen(port);
